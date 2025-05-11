@@ -23,6 +23,7 @@ const ActionButton = ({ href, variant = "primary", children }) => {
   );
 };
 
+
 // Trust Badge component
 const TrustBadge = () => (
   <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg animate-fade-in" aria-label="Client testimonials">
@@ -61,6 +62,7 @@ const HeroImage = () => (
 
 // Hero Text component
 const HeroText = () => (
+
   <div className="space-y-8">
     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
       We build <span className="bg-gradient-to-r from-kn-navy to-kn-green bg-clip-text text-transparent">smarter systems</span> for modern businesses
@@ -72,13 +74,16 @@ const HeroText = () => (
 
     <div className="flex flex-col sm:flex-row gap-4">
       <ActionButton href="/contact" variant="primary">
+
         Get Started
-        <ArrowRight className="h-5 w-5" />
+        <ArrowRight className=" h-5 w-5" />
       </ActionButton>
 
       <ActionButton href="/case-studies" variant="outline">
+
         View Our Work
       </ActionButton>
+
     </div>
   </div>
 );
@@ -98,8 +103,10 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <HeroText />
+
             <div className="hidden lg:block">
               <HeroImage />
+
             </div>
           </div>
         </div>

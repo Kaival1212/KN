@@ -19,15 +19,15 @@ export const metadata = {
     'mobile apps',
     'Raspberry Pi projects',
   ],
-  metadataBase: new URL('https://knconsulting.co.uk'),
+  metadataBase: new URL('https://knconsulting.uk'),
   openGraph: {
     title: 'KN Consulting',
     description: 'Empowering small businesses with tailored technology solutions — from automation to digital transformation.',
-    url: 'https://knconsulting.co.uk',
+    url: 'https://knconsulting.uk',
     siteName: 'KN Consulting',
     images: [
       {
-        url: 'https://knconsulting.co.uk/og-image.jpg',
+        url: 'https://knconsulting.uk/og-image.png',
         width: 1200,
         height: 630,
         alt: 'KN Consulting – Technology Solutions for Small Businesses',
@@ -41,7 +41,7 @@ export const metadata = {
     title: 'KN Consulting',
     description: 'Empowering small businesses with tailored technology solutions — from automation to digital transformation.',
     creator: '@knconsulting',
-    images: ['https://knconsulting.co.uk/og-image.jpg'],
+    images: ['https://knconsulting.uk/og-image.png'],
   },
   icons: {
     icon: '/favicon.ico',
@@ -52,7 +52,7 @@ export const metadata = {
   applicationName: 'KN Consulting',
   generator: 'Next.js',
   referrer: 'origin-when-cross-origin',
-  authors: [{ name: 'Kaival Patel', url: 'https://knconsulting.co.uk/about' }],
+  authors: [{ name: 'Kaival Patel', url: 'https://knconsulting.uk/about' }],
   creator: 'Kaival Patel',
   publisher: 'KN Consulting',
   formatDetection: {
@@ -77,7 +77,9 @@ export default function RootLayout({ children }) {
         className="antialiased"
       >
         <NavBar />
-        {children}
+        <main className="min-h-screen bg-white" aria-label="Hero Section">
+          {children}
+        </main>
       </body>
     </html>
   );
