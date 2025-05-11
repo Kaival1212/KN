@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-kn-navy: #131A2F;
+  --color-kn-green: #4CAF50;
+  --color-kn-gray: #8A898C;
+
+  /* UI Colors */
+  --color-background: hsl(0, 0%, 100%);
+  --color-foreground: hsl(222, 47%, 11%);
+  --color-primary: hsl(222, 47%, 11%);
+  --color-secondary: hsl(210, 40%, 96%);
+  --color-accent: hsl(142, 43%, 42%);
+  --color-muted: hsl(210, 40%, 96%);
+  --color-muted-foreground: hsl(215, 16%, 47%);
+  --color-destructive: hsl(0, 84%, 60%);
+  --color-border: hsl(214, 32%, 91%);
+
+  /* Dark Mode Colors */
+  --color-dark-background: hsl(222, 47%, 11%);
+  --color-dark-foreground: hsl(210, 40%, 98%);
+  --color-dark-secondary: hsl(217, 33%, 17%);
+  --color-dark-muted: hsl(217, 33%, 17%);
+
+  /* Fonts */
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
