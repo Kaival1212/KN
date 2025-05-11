@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Head from "next/head";
+import Service from "@/app/components/Service";
+import CaseStudiesSection from "./components/CaseStudiesSection";
 
 // Button component for consistent styling and accessibility
 const ActionButton = ({ href, variant = "primary", children }) => {
@@ -41,7 +42,7 @@ const TrustBadge = () => (
 
 // Hero Image component with blur effects
 const HeroImage = () => (
-  <div className="relative">
+  <div className="relative circuit-bg pt-24 pb-16 ">
     <div className="absolute -top-8 -right-8 w-72 h-72 bg-kn-green/20 rounded-full blur-3xl"></div>
     <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-kn-navy/20 rounded-full blur-3xl"></div>
     <div className="relative">
@@ -50,10 +51,9 @@ const HeroImage = () => (
         alt="Technology solutions for modern businesses"
         width={800}
         height={600}
-        className="rounded-2xl shadow-2xl relative animate-scale-in w-full object-cover aspect-[4/3]"
+        className="rounded-2xl shadow-2xl relative animate-scale-in "
         priority
         fetchPriority="high"
-        sizes="(max-width: 768px) 100vw, 50vw"
       />
       <TrustBadge />
     </div>
@@ -111,6 +111,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Service />
+      <CaseStudiesSection />
     </>
   );
 }
