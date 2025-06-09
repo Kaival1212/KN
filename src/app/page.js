@@ -1,122 +1,120 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Zap } from "lucide-react";
 import Service from "@/app/components/Service";
 import CaseStudiesSection from "./components/CaseStudiesSection";
 import AboutSection from "./components/AboutSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import BlogSection from "./components/BlogSection";
 
-// Button component for consistent styling and accessibility
+// Simple, clean button component
 const ActionButton = ({ href, variant = "primary", children }) => {
-  const baseClasses = "px-8 py-4 rounded-md inline-flex items-center justify-center gap-2 font-medium transition-colors duration-200";
+  const baseClasses = "inline-flex items-center gap-3 px-8 py-4 rounded-lg font-semibold transition-all duration-200";
   const variantClasses = {
     primary: "bg-kn-navy hover:bg-kn-navy/90 text-white",
-    outline: "border border-kn-navy text-kn-navy hover:bg-kn-navy/5"
+    outline: "border-2 border-kn-navy text-kn-navy hover:bg-kn-navy hover:text-white"
   };
 
   return (
-    <Link
-      href={href}
-      className={`${baseClasses} ${variantClasses[variant]}`}
-      role="button"
-      aria-label={typeof children === 'string' ? children : undefined}
-    >
+    <Link href={href} className={`${baseClasses} ${variantClasses[variant]}`}>
       {children}
     </Link>
   );
 };
 
-
-// Trust Badge component
+// Simple trust badge
 const TrustBadge = () => (
-  <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg animate-fade-in" aria-label="Client testimonials">
-    <p className="text-sm font-medium text-kn-navy">Trusted by businesses across the UK</p>
-    <div className="flex items-center mt-2">
-      <div className="flex -space-x-2">
-        <div className="w-8 h-8 rounded-full bg-gray-300 border-2 border-white flex items-center justify-center text-xs font-medium">S</div>
-        <div className="w-8 h-8 rounded-full bg-gray-300 border-2 border-white flex items-center justify-center text-xs font-medium">C</div>
-        <div className="w-8 h-8 rounded-full bg-gray-300 border-2 border-white flex items-center justify-center text-xs font-medium">T</div>
-      </div>
-      <p className="ml-3 text-xs text-gray-500">and many more</p>
-    </div>
+  <div className="absolute -top-4 -right-4 bg-kn-green text-white px-4 py-2 rounded-lg text-sm font-medium">
+    Pay When Satisfied
   </div>
 );
 
-// Hero Image component with blur effects
+// Clean hero image
 const HeroImage = () => (
-  <div className="relative circuit-bg pt-24 pb-16 ">
-    <div className="absolute -top-8 -right-8 w-72 h-72 bg-kn-green/20 rounded-full blur-3xl"></div>
-    <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-kn-navy/20 rounded-full blur-3xl"></div>
-    <div className="relative">
+  <div className="relative">
+    <div className="relative rounded-2xl overflow-hidden shadow-xl">
       <Image
         src="/hero_image.avif"
-        alt="Technology solutions for modern businesses"
-        width={800}
-        height={600}
-        className="rounded-2xl shadow-2xl relative animate-scale-in "
+        alt="Business automation systems"
+        width={600}
+        height={400}
+        className="object-cover w-full h-full"
         priority
-        fetchPriority="high"
       />
-      <TrustBadge />
     </div>
+    <TrustBadge />
   </div>
 );
 
-// Hero Text component
+// Focused hero text
 const HeroText = () => (
-
   <div className="space-y-8">
-    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-      We build <span className="bg-gradient-to-r from-kn-navy to-kn-green bg-clip-text text-transparent">smarter systems</span> for modern businesses
+    {/* Simple status badge */}
+    <div className="inline-flex items-center gap-2 bg-kn-green/10 text-kn-green px-4 py-2 rounded-full text-sm font-medium">
+      <div className="w-2 h-2 bg-kn-green rounded-full"></div>
+      Live systems operating 24/7
+    </div>
+
+    {/* Clear, focused headline */}
+    <h1 className="text-5xl md:text-6xl font-bold text-kn-navy leading-tight">
+      We build{" "}
+      <span className="text-kn-green">working systems</span>{" "}
+      that actually{" "}
+      <span className="text-kn-green">run your business</span>
     </h1>
 
-    <p className="text-lg md:text-xl text-gray-700">
-      Custom software development, business automation, and digital growth strategies that streamline your operations and drive real results.
+    {/* Simple, powerful subheading */}
+    <p className="text-xl text-gray-600 leading-relaxed">
+      Not websites that collect dust. Not apps nobody uses.
+      Real automation systems that work while you sleep.{" "}
+      <span className="font-semibold text-kn-green">Pay only when you're completely satisfied.</span>
     </p>
 
+    {/* Clean CTA buttons */}
     <div className="flex flex-col sm:flex-row gap-4">
       <ActionButton href="/contact" variant="primary">
-
-        Get Started
-        <ArrowRight className=" h-5 w-5" />
+        <Zap className="w-5 h-5" />
+        Start Automating Now
+        <ArrowRight className="w-5 h-5" />
       </ActionButton>
 
       <ActionButton href="/case-studies" variant="outline">
-
-        View Our Work
+        See Live Systems
       </ActionButton>
-
     </div>
   </div>
 );
 
+// Clean hero section
+const CleanHeroSection = () => (
+  <section className="py-20 bg-white">
+    <div className="mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <HeroText />
+        <div className="hidden lg:block">
+          <HeroImage />
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 export default function Home() {
   return (
     <>
-      <section
-        className="relative flex items-center height-auto pt-10 circuit-bg"
-        aria-label="Business solutions hero section"
-      >
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-transparent"></div>
-        </div>
+      {/* Clean, Focused Hero */}
+      <CleanHeroSection />
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <HeroText />
-
-            <div className="hidden lg:block">
-              <HeroImage />
-
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Core Services */}
       <Service />
+
+      {/* Social Proof */}
       <CaseStudiesSection />
+
+      {/* Trust Building - Remove this if still too much */}
       <TestimonialsSection />
+
+      {/* Consider removing these to reduce clutter */}
       <BlogSection />
       <AboutSection />
     </>
