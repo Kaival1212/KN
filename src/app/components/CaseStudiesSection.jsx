@@ -4,14 +4,14 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
 const caseStudies = [
-  {
-    image: 'https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?q=80&w=870&auto=format&fit=crop',
-    title: 'Phones & Vapes For All',
-    description:
-      'Multi-location POS system with repair booking and Stripe integration that increased operational efficiency by 35%.',
-    tags: ['E-commerce', 'POS', 'Stripe Integration'],
-    href: '/case-studies/phones-and-vapes',
-  },
+  // {
+  //   image: 'https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?q=80&w=870&auto=format&fit=crop',
+  //   title: 'Phones & Vapes For All',
+  //   description:
+  //     'Multi-location POS system with repair booking and Stripe integration that increased operational efficiency by 35%.',
+  //   tags: ['E-commerce', 'POS', 'Stripe Integration'],
+  //   href: '/case-studies/phones-and-vapes',
+  // },
   {
     image: 'https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=1471&auto=format&fit=crop',
     title: 'Eurowash Launderette',
@@ -98,7 +98,7 @@ export default function CaseStudiesSection() {
             <ArrowRight className="w-4 h-4 ml-1" />
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
           {caseStudies.map((cs) => (
             <CaseStudyCard key={cs.title} {...cs} />
           ))}

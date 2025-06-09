@@ -5,9 +5,6 @@ const nextConfig = {
         domains: ['knconsulting.uk', 'images.unsplash.com'],
     },
 
-    swcMinify: true,
-
-
 };
 
 export default nextConfig;

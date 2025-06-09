@@ -3,6 +3,9 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Service from "@/app/components/Service";
 import CaseStudiesSection from "./components/CaseStudiesSection";
+import AboutSection from "./components/AboutSection";
+import TestimonialsSection from "./components/TestimonialsSection";
+import BlogSection from "./components/BlogSection";
 
 // Button component for consistent styling and accessibility
 const ActionButton = ({ href, variant = "primary", children }) => {
@@ -113,6 +116,9 @@ export default function Home() {
       </section>
       <Service />
       <CaseStudiesSection />
+      <TestimonialsSection />
+      <BlogSection />
+      <AboutSection />
     </>
   );
 }

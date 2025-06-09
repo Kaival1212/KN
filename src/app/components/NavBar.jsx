@@ -24,7 +24,7 @@ const NavLink = ({ href, children, ariaLabel }) => (
 
 // CTA Button component with improved accessibility
 const CtaButton = () => (
-  <Link 
+  <Link
     href="/contact"
     aria-label="Contact us"
     className="bg-kn-green text-white font-semibold px-4 py-2 rounded-md hover:bg-kn-green/90 transition duration-200 shadow-sm inline-block"
@@ -51,9 +51,9 @@ const Logo = () => (
 // Mobile menu component with accessibility and semantic improvements
 const MobileMenu = ({ isOpen, links }) => {
   if (!isOpen) return null;
-  
+
   return (
-    <nav 
+    <nav
       className="absolute top-16 right-0 bg-white shadow-lg rounded-md p-4 w-48"
       aria-label="Mobile navigation"
       role="navigation"
@@ -68,7 +68,7 @@ const MobileMenu = ({ isOpen, links }) => {
           {link.name}
         </Link>
       ))}
-      <Link 
+      <Link
         href="/contact"
         className="bg-kn-green text-white font-semibold px-4 py-2 rounded-md hover:bg-kn-green/90 transition duration-200 shadow-sm w-full inline-block text-center mt-2"
         aria-label="Contact us"
@@ -82,7 +82,7 @@ const MobileMenu = ({ isOpen, links }) => {
 
 // Hamburger icon component with accessibility improvements
 const HamburgerIcon = ({ onClick, isOpen }) => (
-  <button 
+  <button
     className="text-kn-navy focus:outline-none focus:ring-2 focus:ring-kn-green rounded-md p-2"
     onClick={onClick}
     aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -109,16 +109,16 @@ const HamburgerIcon = ({ onClick, isOpen }) => (
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const toggleMenu = useCallback(() => {
     setIsOpen(prevState => !prevState);
   }, []);
 
   return (
     <>
-      
+
       <header className="bg-white shadow-sm" itemScope itemType="http://schema.org/SiteNavigationElement">
-        <nav 
+        <nav
           className="mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between"
           aria-label="Main navigation"
           role="navigation"
@@ -130,7 +130,7 @@ const NavBar = () => {
           <div className="hidden md:flex items-center space-x-6" role="menubar">
             {navLinks.map((link) => (
               <div key={link.name} role="menuitem">
-                <NavLink 
+                <NavLink
                   href={link.href}
                   ariaLabel={link.ariaLabel}
                 >
@@ -148,7 +148,7 @@ const NavBar = () => {
           {/* Mobile hamburger */}
           <div className="md:hidden">
             <HamburgerIcon onClick={toggleMenu} isOpen={isOpen} />
-            
+
             {/* Mobile Menu */}
             <MobileMenu isOpen={isOpen} links={navLinks} />
           </div>
