@@ -67,7 +67,7 @@ const HeroText = () => (
     <p className="text-xl text-gray-600 leading-relaxed">
       Not websites that collect dust. Not apps nobody uses.
       Real automation systems that work while you sleep.{" "}
-      <span className="font-semibold text-kn-green">Pay only when you're completely satisfied.</span>
+      <span className="font-semibold text-kn-green">Pay only when you&apos;re completely satisfied.</span>
     </p>
 
     {/* Clean CTA buttons */}
