@@ -112,7 +112,7 @@ export default function Home() {
       <CaseStudiesSection />
 
       {/* Trust Building - Remove this if still too much */}
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
 
       {/* Consider removing these to reduce clutter */}
       <BlogSection />
