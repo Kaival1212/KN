@@ -15,7 +15,7 @@ export const metadata = {
     'digital transformation',
     'custom software',
     'London tech consulting',
-    'small business solutions',
+    'small business solutions',     
     'web development',
     'mobile apps',
     'Raspberry Pi projects',
