@@ -75,8 +75,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <Script id="CookieDeclaration" strategy="beforeInteractive" src="https://consent.cookiebot.com/646bffc5-94ca-49dd-9203-74e3ed314193/cd.js" type="text/javascript" async></Script>
-        <Script id="Cookiebot" strategy="beforeInteractive" src="https://consent.cookiebot.com/uc.js" data-cbid="646bffc5-94ca-49dd-9203-74e3ed314193" type="text/javascript"></Script>
       </head>
       <body
         className="antialiased"

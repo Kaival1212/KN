@@ -102,6 +102,7 @@ const CleanHeroSection = () => (
 export default function Home() {
   return (
     <>
+
       {/* Clean, Focused Hero */}
       <CleanHeroSection />
 
