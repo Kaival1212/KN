@@ -7,7 +7,7 @@ const PrivacyPolicyPage = () => {
     return (
 
         <div className="min-h-screen bg-white">
-            <script id="CookieDeclaration" src="https://consent.cookiebot.com/646bffc5-94ca-49dd-9203-74e3ed314193/cd.js" type="text/javascript" async></script>
+            <script id="CookieDeclaration" src="https://consent.cookiebot.com/646bffc5-94ca-49dd-9203-74e3ed314193/cd.js" type="text/javascript" async></Script>
             {/* Header */}
             <section className="py-12 bg-gradient-to-b from-gray-50 to-white border-b border-gray-100">
                 <div className="mx-auto px-4 sm:px-6 lg:px-8">
