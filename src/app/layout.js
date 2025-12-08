@@ -81,7 +81,10 @@ export default function RootLayout({ children }) {
       <body
         className="antialiased"
       >
+        <div id="cookie-declaration" className="cookie-declaration"></div>
+
         <NavBar />
+
         <main className="min-h-screen bg-white" aria-label="Hero Section">
           {children}
         </main>
