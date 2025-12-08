@@ -85,6 +85,7 @@ export default function RootLayout({ children }) {
 
         {/* Google Consent Mode (ignored by Cookiebot) */}
         <Script
+          id="GoogleConsentMode"
           data-cookieconsent="ignore"
           dangerouslySetInnerHTML={{
             __html: `
