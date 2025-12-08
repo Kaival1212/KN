@@ -5,7 +5,9 @@ import { ArrowLeft, CheckCircle } from 'lucide-react'
 
 const PrivacyPolicyPage = () => {
     return (
+
         <div className="min-h-screen bg-white">
+            <script id="CookieDeclaration" src="https://consent.cookiebot.com/646bffc5-94ca-49dd-9203-74e3ed314193/cd.js" type="text/javascript" async></script>
             {/* Header */}
             <section className="py-12 bg-gradient-to-b from-gray-50 to-white border-b border-gray-100">
                 <div className="mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +34,7 @@ const PrivacyPolicyPage = () => {
             {/* Privacy Policy Content */}
             <section className="py-20">
                 <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl space-y-12">
-                    
+
                     {/* Information Collection */}
                     <div className="space-y-4">
                         <h2 className="text-2xl font-bold text-kn-navy">1. Information We Collect</h2>
@@ -79,7 +81,7 @@ const PrivacyPolicyPage = () => {
                     <div className="space-y-4">
                         <h2 className="text-2xl font-bold text-kn-navy">5. Your Rights</h2>
                         <p className="text-gray-600">
-                            Under UK GDPR, you have the right to access, correct, or request deletion of your personal data. You may also object to how your data is used and withdraw consent at any time by contacting us at 
+                            Under UK GDPR, you have the right to access, correct, or request deletion of your personal data. You may also object to how your data is used and withdraw consent at any time by contacting us at
                             <span className="font-semibold text-kn-green"> kaival@knconsulting.uk</span>.
                         </p>
                     </div>
