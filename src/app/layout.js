@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <Script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="646bffc5-94ca-49dd-9203-74e3ed314193" data-blockingmode="auto" type="text/javascript"></Script>
+        <Script id="Cookiebot" strategy="beforeInteractive" src="https://consent.cookiebot.com/uc.js" data-cbid="646bffc5-94ca-49dd-9203-74e3ed314193" data-blockingmode="auto" type="text/javascript"></Script>
 
       </head>
       <body
