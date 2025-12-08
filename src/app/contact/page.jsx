@@ -21,9 +21,10 @@ const ContactPage = () => {
 
     const projectTypes = [
         'Business Automation System',
-        'AI Security System',
-        'Property Management Software',
+        'Loyalty Program Development',
+        'Mobile App Development',
         'Custom Software Development',
+        'Web Application Development',
         'Startup Development Services',
         'Not Sure - Need Consultation'
     ]
