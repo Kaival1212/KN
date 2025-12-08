@@ -152,50 +152,54 @@ export default function ServicesPage() {
             ]
         },
         {
-            id: 'security',
+            id: 'loyalty-programs',
             icon: <Shield size={28} />,
-            title: 'AI Security Systems',
-            description: 'Smart surveillance systems with edge processing that capture clear evidence when traditional CCTV fails. Our AI-powered face visibility detection runs locally on Raspberry Pi hardware for privacy and cost efficiency.',
+            title: 'Loyalty Programs & Customer Retention',
+
+            // points 1) easy to use and register with apple and google wallet 2) tiered rewards 3) digital punch cards 4) referral programs 5) analytics dashboard
+            description: 'Custom digital loyalty programs that keep your customers coming back. We build easy-to-use systems integrated with Apple Wallet and Google Pay, featuring tiered rewards, digital punch cards, referral tracking, and analytics dashboards to monitor engagement.',
             benefits: [
-                'Crystal clear face detection when it matters',
-                'Edge processing - no cloud dependency',
-                'Customer flagging and repeat visitor alerts',
-                'Privacy-focused - face visibility, not recognition',
-                'Low-cost hardware with professional results',
-                'Real-time admin dashboard and notifications'
+                'Seamless integration with Apple Wallet and Google Pay',
+                'Tiered rewards to incentivize higher spending',
+                'Digital punch cards for easy tracking',
+                'Referral programs to grow your customer base',
+                'Analytics dashboard to monitor engagement',
+                'Automated customer notifications'
             ],
             process: [
                 {
-                    title: 'Site Assessment',
-                    description: 'Evaluate your premises and identify optimal camera placement for coverage.'
+                    title: 'Design Loyalty Structure',
+                    description: 'We work with you to design a loyalty program that fits your business model and customer base.'
                 },
                 {
-                    title: 'Custom Installation',
-                    description: 'Install Raspberry Pi cameras and configure the AI detection system.'
+                    title: 'Develop Digital System',
+                    description: 'Build the digital loyalty program with all desired features and integrations.'
                 },
                 {
-                    title: 'System Configuration',
-                    description: 'Set up admin dashboard, alerts, and customer flagging features.'
+                    title: 'Launch & Promote',
+                    description: 'Assist with launching the program and promoting it to your customers.'
                 },
                 {
-                    title: 'Training & Monitoring',
-                    description: 'Train your team on the system and provide ongoing monitoring support.'
+                    title: 'Monitor & Optimize',
+                    description: 'Provide analytics and suggestions for optimizing the program over time.'
                 }
             ],
             pricing: {
-                upfront: 'Only pay when satisfied',
-                monthly: 'Monthly hosting & monitoring available',
-                note: 'Complete system including hardware. Payment only when you see it working.'
+                upfront: 'Custom pricing based on features',
+                monthly: 'monthly support',
+                note: 'Pricing varies based on the complexity and features of the loyalty program.'
             },
+            // copper chimeny and happy london resturnt loyalty program
             examples: [
                 {
-                    title: 'Retail Theft Detection',
-                    description: 'When a trolly was stolen, our system captured clear faces while traditional CCTV was too blurry to identify anyone.'
+                    title: 'Copper Chimney Restaurant',
+                    description: 'Digital loyalty program with points system integrated with Apple Wallet.'
                 },
                 {
-                    title: 'Customer Flagging System',
-                    description: 'Automatically alert staff when flagged individuals return to your premises.'
+                    title: 'Happy London',
+                    description: 'Points rewards system with referral tracking and analytics dashboard.'
                 }
+
             ]
         },
         {
@@ -249,12 +253,11 @@ export default function ServicesPage() {
             id: 'development',
             icon: <Smartphone size={28} />,
             title: 'Working Software Solutions',
-            description: 'Interactive business applications that your team actually uses daily - not static websites that collect dust. We build tools that become essential to your daily operations.',
+            description: 'Interactive mobile applications and websites that your team actually uses daily - not static websites that collect dust. We build tools that become essential to your daily operations.',
             benefits: [
                 'Software your team will actually use',
                 'Training included for team adoption',
                 'Real-time data and live updates',
-                'Mobile-responsive for on-the-go access',
                 'Integration with existing tools',
                 'Built for your specific workflow'
             ],

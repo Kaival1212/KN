@@ -73,6 +73,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="646bffc5-94ca-49dd-9203-74e3ed314193" type="text/javascript"></script>
+      </head>
       <body
         className="antialiased"
       >
