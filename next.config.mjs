@@ -2,7 +2,7 @@
 const nextConfig = {
 
     images: {
-        domains: ['knconsulting.uk', 'images.unsplash.com'],
+        domains: ['knconsulting.uk', 'images.unsplash.com', 'happyrestaurants.com'],
     },
 
 };

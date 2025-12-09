@@ -310,7 +310,7 @@ export default function EurowashCaseStudy() {
                             <ArrowRight className="w-5 h-5 ml-2" />
                         </Link>
                         <Link
-                            href="/case-studies"
+                            href="/our-work"
                             className="inline-flex items-center px-8 py-4 border border-kn-navy text-kn-navy font-semibold rounded-lg hover:bg-kn-navy/5 transition-colors"
                         >
                             View More Case Studies

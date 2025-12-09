@@ -10,16 +10,17 @@ const caseStudies = [
     description:
       'Complete 24/7 automation with smart lockers, payment processing, and management dashboard. Eliminated the need for on-site staff.',
     tags: ['Smart Lockers', 'Payment Integration', '24/7 Automation'],
-    href: '/case-studies/eurowash-launderette',
+    href: '/our-work/eurowash-launderette',
     highlight: 'Live System'
   },
   {
-    image: 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?q=80&w=1471&auto=format&fit=crop',
-    title: 'AI Security System - Retail Protection',
+    //for Loyalty Programs at Happy London Restaurant
+    image: 'https://happyrestaurants.com/files/images/398/fit_1236_432_0f5ffa4df0ecda885629751e976071d0.jpg',
+    title: 'Happy London Restaurant Loyalty Program',
     description:
-      'When traditional CCTV failed to identify thieves, our AI system captured crystal clear faces.',
-    tags: ['AI Detection', 'Edge Processing', 'Crime Prevention'],
-    href: '/case-studies/ai-security-system',
+      'Digital loyalty program integrated with Apple Wallet and Google Pay. Increased repeat customer visits within the first 3 months.',
+    tags: ['Digital Loyalty', 'Customer Retention', 'Mobile Integration'],
+    href: '/our-work/happy-london-loyalty',
     highlight: 'Proven Results'
   },
   {
@@ -28,14 +29,14 @@ const caseStudies = [
     description:
       'Custom tenant management, rent tracking, and automated communications system. Currently in development for multi-property portfolio.',
     tags: ['Property Management', 'Tenant Portal', 'Automated Workflows'],
-    href: '/case-studies/property-management',
+    href: '/our-work/property-management',
     highlight: 'In Development'
   },
 ]
 
 function CaseStudyCard({ image, title, description, tags, href, highlight }) {
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group relative">
+    <div className="bg-white rounded-xl overflow-hidden shadow-sm sm:min-w-1/4 min-w-screen border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group relative">
       {highlight && (
         <div className="absolute top-4 right-4 z-10">
           <span className={`px-3 py-1 rounded-full text-xs font-semibold ${highlight === 'Live System' ? 'bg-kn-green text-white' :
@@ -138,7 +139,7 @@ export default function CaseStudiesSection() {
 
         {/* <St atsBar /> */}
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-12">
+        <div className="flex flex-row gap-8 py-6 overflow-scroll mb-12">
           {caseStudies.map((cs) => (
             <CaseStudyCard key={cs.title} {...cs} />
           ))}
@@ -147,11 +148,11 @@ export default function CaseStudiesSection() {
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4">
             <Link
-              href="/case-studies"
+              href="/our-work"
               className="inline-flex items-center px-8 py-4 rounded-md bg-kn-green text-white hover:bg-kn-green/90 transition-colors font-semibold"
               aria-label="View all case studies"
             >
-              View Detailed Case Studies
+              View More Work
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link

@@ -14,12 +14,12 @@ const services = [
     },
     {
         icon: <Shield size={24} />,
-        title: 'AI Security Systems',
+        title: 'Loyalty Programs & Customer Retention',
         description:
-            'Smart surveillance with edge processing, face visibility detection, and customer flagging that captures clear evidence when traditional CCTV fails.',
-        features: ['Edge Processing', 'Face Detection', 'Real-time Alerts'],
+            'digital loyalty programs that keep your customers coming back. We build easy-to-use systems integrated with Apple Wallet and Google Pay.',
+        features: ['Digital Punch Cards', 'Tiered Rewards', 'Referral Tracking'],
         badge: 'Proven Results',
-        href: '/services#security',
+        href: '/services#loyalty-programs',
     },
     {
         icon: <Users size={24} />,
@@ -34,8 +34,8 @@ const services = [
         icon: <Smartphone size={24} />,
         title: 'Working Software Solutions',
         description:
-            'Interactive business applications that your team actually uses daily - not static websites that collect dust. Built with the right technology for your specific workflow.',
-        features: ['Daily Business Use', 'Team Training Included', 'Real-time Data'],
+            'Interactive mobile applications and websites that your team actually uses daily - not static websites that collect dust.',
+        features: ['User-friendly Design', 'Team Training', 'Real-time Data'],
         badge: null,
         href: '/services#development',
     },
@@ -119,8 +119,8 @@ function StatsCard({ icon, number, label }) {
 
 export default function Service() {
     return (
-        <section id="services" className="py-20 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="services-heading">
-            <div className="container mx-auto px-4">
+        <section id="services" className="py-10 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="services-heading">
+            <div className="container mx-auto">
                 <div className="text-center mb-16">
                     <h2 id="services-heading" className="text-3xl md:text-4xl font-bold mb-4">
                         Our Services
@@ -137,7 +137,7 @@ export default function Service() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     {services.map((svc) => (
                         <ServiceCard
                             key={svc.title}
