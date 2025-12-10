@@ -48,6 +48,15 @@ const ContactPage = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        const token = document.querySelector("[name='cf-turnstile-response']")?.value;
+
+        if (!token) {
+            setStatus({
+                type: 'error',
+                message: 'Verification failed. Please try again.'
+            });
+            return;
+        }
         setStatus({ type: 'loading', message: 'Sending your message…' })
 
         try {
@@ -62,7 +71,8 @@ const ContactPage = () => {
                     company: formData.company || 'Not specified',
                     budget: formData.budget || 'Not specified',
                     _subject: `New Inquiry: ${formData.project_type} — ${formData.name}${formData.urgency === 'high' ? ' (URGENT)' : ''}`,
-                    _replyto: formData.email
+                    _replyto: formData.email,
+                    "cf-turnstile-response": token,
                 })
             })
 
@@ -359,7 +369,7 @@ const ContactPage = () => {
                                             placeholder="Tell us what you want to build, automate, or improve. The more detail, the better."
                                         />
                                     </div>
-
+                                    <div className="cf-turnstile" data-sitekey="0x4AAAAAACFzZSz9cLYWihQk"></div>
                                     {/* SUBMIT */}
                                     <button
                                         type="submit"
