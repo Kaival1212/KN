@@ -1,9 +1,20 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowLeft, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 const ContactPage = () => {
+
+    useEffect(() => {
+        // Ensure Turnstile renders after client-side navigation
+        if (typeof window !== "undefined" && window.turnstile) {
+            window.turnstile.render(".cf-turnstile", {
+                sitekey: "0x4AAAAAACFzZSz9cLYWihQk",
+                theme: "light",
+            });
+        }
+    }, []);
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
