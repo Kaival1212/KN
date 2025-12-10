@@ -6,9 +6,9 @@ import { ArrowRight, Shield, Lock, Eye } from 'lucide-react'
 const caseStudies = [
   {
     image: 'https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=1471&auto=format&fit=crop',
-    title: 'Eurowash Launderette Smart System',
+    title: 'Eurowash 24/7 Smart Service Platform',
     description:
-      'Complete 24/7 automation with smart lockers, payment processing, and management dashboard. Eliminated the need for on-site staff.',
+      'A fully automated service platform featuring smart lockers, integrated payments, and a real-time management dashboard—designed to operate without on-site staff.',
     tags: ['Smart Lockers', 'Payment Integration', '24/7 Automation'],
     href: '/our-work/eurowash-launderette',
     highlight: 'Live System'
@@ -16,18 +16,18 @@ const caseStudies = [
   {
     //for Loyalty Programs at Happy London Restaurant
     image: 'https://happyrestaurants.com/files/images/398/fit_1236_432_0f5ffa4df0ecda885629751e976071d0.jpg',
-    title: 'Happy London Restaurant Loyalty Program',
+    title: 'Happy London Digital Loyalty Experience',
     description:
-      'Digital loyalty program integrated with Apple Wallet and Google Pay. Increased repeat customer visits within the first 3 months.',
+      'Wallet-integrated loyalty system built for Apple Wallet and Google Wallet—delivering a measurable increase in repeat visits within the first 90 days.',
     tags: ['Digital Loyalty', 'Customer Retention', 'Mobile Integration'],
     href: '/our-work/happy-london-loyalty',
     highlight: 'Proven Results'
   },
   {
     image: 'https://images.unsplash.com/photo-1560472355-536de3962603?q=80&w=1471&auto=format&fit=crop',
-    title: 'Property Management System',
+    title: 'Property & Tenant Management Platform',
     description:
-      'Custom tenant management, rent tracking, and automated communications system. Currently in development for multi-property portfolio.',
+      'A custom-built platform for tenant management, rent automation, and scheduled communications—developed for multi-property portfolios.',
     tags: ['Property Management', 'Tenant Portal', 'Automated Workflows'],
     href: '/our-work/property-management',
     highlight: 'In Development'
@@ -130,14 +130,14 @@ export default function CaseStudiesSection() {
             id="case-studies-heading"
             className="text-3xl md:text-4xl font-bold mb-4 text-kn-navy"
           >
-            Real Results from Real Projects
+            Real Projects. Real Impact.
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            See how we've transformed businesses with working automation systems. These aren't just case studies - they're live, operating solutions.
+            Explore how we deliver high-performing websites, apps, software, and automation systems that solve real operational challenges. These aren’t theoretical case studies—they’re live, scalable solutions in daily use.
           </p>
         </div>
 
-        {/* <St atsBar /> */}
+        {/* <StatsBar /> */}
 
         <div className="flex flex-row gap-8 py-6 overflow-scroll mb-12">
           {caseStudies.map((cs) => (
@@ -152,7 +152,7 @@ export default function CaseStudiesSection() {
               className="inline-flex items-center px-8 py-4 rounded-md bg-kn-green text-white hover:bg-kn-green/90 transition-colors font-semibold"
               aria-label="View all case studies"
             >
-              View More Work
+              Explore Our Portfolio
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
@@ -160,7 +160,7 @@ export default function CaseStudiesSection() {
               className="inline-flex items-center px-8 py-4 rounded-md border border-kn-navy text-kn-navy hover:bg-kn-navy/5 transition-colors font-semibold"
               aria-label="Start your project"
             >
-              Start Your Project
+              Request a Project Estimate
             </Link>
           </div>
         </div>

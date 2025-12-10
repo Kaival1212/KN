@@ -1,32 +1,42 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, ArrowRight, Clock, Users, Shield, Zap, CheckCircle, Lock } from 'lucide-react'
+import {
+    ArrowLeft,
+    ArrowRight,
+    Clock,
+    Users,
+    Shield,
+    Zap,
+    CheckCircle,
+    Lock
+} from 'lucide-react'
 
+// Challenge cards
 const ChallengeCard = ({ icon, title, description }) => (
-    <div className="bg-red-50 p-6 rounded-lg border border-red-100">
+    <div className="bg-amber-50 p-6 rounded-lg border border-amber-100">
         <div className="flex items-center mb-3">
-            <div className="p-2 bg-red-100 rounded-lg mr-3">
-                {icon}
-            </div>
-            <h3 className="font-semibold text-red-800">{title}</h3>
+            <div className="p-2 bg-amber-100 rounded-lg mr-3">{icon}</div>
+            <h3 className="font-semibold text-amber-900">{title}</h3>
         </div>
-        <p className="text-red-700 text-sm">{description}</p>
+        <p className="text-amber-800 text-sm">{description}</p>
     </div>
-);
+)
 
+// Solution cards
 const SolutionCard = ({ icon, title, description }) => (
-    <div className="bg-green-50 p-6 rounded-lg border border-green-100">
+    <div className="bg-kn-green/5 p-6 rounded-lg border border-kn-green/20">
         <div className="flex items-center mb-3">
-            <div className="p-2 bg-green-100 rounded-lg mr-3 text-green-600">
+            <div className="p-2 bg-kn-green/10 rounded-lg mr-3 text-kn-green">
                 {icon}
             </div>
-            <h3 className="font-semibold text-green-800">{title}</h3>
+            <h3 className="font-semibold text-kn-navy">{title}</h3>
         </div>
-        <p className="text-green-700 text-sm">{description}</p>
+        <p className="text-gray-700 text-sm">{description}</p>
     </div>
-);
+)
 
+// Feature cards
 const FeatureCard = ({ icon, title, description, details }) => (
     <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
         <div className="flex items-center mb-4">
@@ -35,7 +45,9 @@ const FeatureCard = ({ icon, title, description, details }) => (
             </div>
             <h3 className="text-xl font-semibold text-kn-navy">{title}</h3>
         </div>
+
         <p className="text-gray-600 mb-4">{description}</p>
+
         <ul className="space-y-2">
             {details.map((detail, index) => (
                 <li key={index} className="flex items-start text-sm text-gray-700">
@@ -45,247 +57,251 @@ const FeatureCard = ({ icon, title, description, details }) => (
             ))}
         </ul>
     </div>
-);
+)
 
 export default function EurowashCaseStudy() {
+    // Accurate business challenges
     const challenges = [
         {
-            icon: <Clock className="w-5 h-5 text-red-600" />,
-            title: "Limited Operating Hours",
-            description: "Traditional launderette required staff presence, limiting service availability to business hours only."
+            icon: <Clock className="w-5 h-5 text-amber-700" />,
+            title: 'Manual Order Handling',
+            description:
+                'Although the launderette was already 24/7 and unmanned, all orders were tracked manually through paper notes and WhatsApp messages.'
         },
         {
-            icon: <Users className="w-5 h-5 text-red-600" />,
-            title: "High Staff Costs",
-            description: "Required full-time staff for customer service, payment processing, and order management."
+            icon: <Users className="w-5 h-5 text-amber-700" />,
+            title: 'No Structured Staff Workflow',
+            description:
+                'Staff had no unified dashboard for tracking washing, drying, folding, pricing, or order completion.'
         },
         {
-            icon: <Shield className="w-5 h-5 text-red-600" />,
-            title: "Manual Processes",
-            description: "Paper-based order tracking, manual payment collection, and phone-based customer communications."
+            icon: <Shield className="w-5 h-5 text-amber-700" />,
+            title: 'Manual Payment Requests',
+            description:
+                'Payment links had to be created and sent manually, causing delays, missed payments, and inconsistent processes.'
         }
-    ];
+    ]
 
+    // Real-world solution
     const solutions = [
         {
-            icon: <Lock className="w-5 h-5" />,
-            title: "Smart Locker System",
-            description: "Secure, automated drop-off and pickup system with unique access codes for each customer."
-        },
-        {
             icon: <Zap className="w-5 h-5" />,
-            title: "24/7 Operations",
-            description: "Customers can now access services anytime, significantly expanding business hours."
+            title: 'Digital Order Flow',
+            description:
+                'We recreated the entire locker workflow as a digital system — preserving their existing process but eliminating manual admin work.'
         },
         {
             icon: <CheckCircle className="w-5 h-5" />,
-            title: "Complete Automation",
-            description: "Eliminated need for on-site staff while maintaining high service quality."
+            title: 'Staff Charging System',
+            description:
+                'Staff can now set charges in seconds. The system automatically sends secure payment links to customers.'
+        },
+        {
+            icon: <Lock className="w-5 h-5" />,
+            title: 'Automated Notifications',
+            description:
+                'Customers receive instant updates for order receipt, wash completion, payment reminders, and locker pickup details.'
         }
-    ];
+    ]
 
+    // Features
     const features = [
         {
             icon: <Lock className="w-6 h-6" />,
-            title: "Smart Locker System",
-            description: "Secure automated lockers for customer drop-off and pickup",
+            title: 'Smart Locker Workflow Digitisation',
+            description:
+                'A fully digital workflow built around their existing physical lockers — no hardware change required.',
             details: [
-                "Unique access codes generated for each customer",
-                "Multiple locker sizes for different order volumes",
-                "Secure locking mechanism with backup access",
-                "Real-time locker availability tracking"
+                'Unique access codes per customer',
+                'Locker status tracking',
+                'Pickup automation tied to payment',
+                'Zero manual admin required for locker releases'
             ]
         },
         {
             icon: <Users className="w-6 h-6" />,
-            title: "Management Dashboard",
-            description: "Complete order management and business oversight system",
+            title: 'Staff Operations Dashboard',
+            description:
+                'A structured system for staff to manage washing, drying, folding, charging, and order completion.',
             details: [
-                "Real-time order status tracking",
-                "Customer communication management",
-                "Revenue and performance analytics",
-                "Staff task assignment and tracking"
+                'Task-based workflow',
+                'Real-time status updates',
+                'Order notes and history',
+                'Automatic time tracking for jobs'
             ]
         },
         {
             icon: <Zap className="w-6 h-6" />,
-            title: "Automated Notifications",
-            description: "SMS and email communication system",
+            title: 'Automated Customer Messaging',
+            description:
+                'Instant SMS & email notifications at every step of the order lifecycle.',
             details: [
-                "Order confirmation messages",
-                "Wash completion notifications",
-                "Payment request automation",
-                "Pickup ready alerts with access codes"
+                'Drop-off confirmation',
+                'Wash completion alerts',
+                'Payment link automation',
+                'Pickup-ready notifications with access codes'
             ]
         },
         {
             icon: <Shield className="w-6 h-6" />,
-            title: "Payment Integration",
-            description: "Secure online payment processing",
+            title: 'Fully Integrated Payments',
+            description:
+                'A complete digital payment pipeline that reduces staff overhead and speeds up collections.',
             details: [
-                "Stripe payment gateway integration",
-                "Secure payment link generation",
-                "Automatic receipt generation",
-                "Payment confirmation triggers locker access"
+                'Stripe-integrated payment links',
+                'Auto-generated receipts',
+                'Automated reminders for unpaid orders',
+                'Locker access restricted until payment is received'
             ]
         }
-    ];
+    ]
 
+    // Updated, realistic results
     const results = [
-        { metric: "24/7", description: "Service Availability", color: "text-blue-600" },
-        { metric: "100%", description: "Staff Cost Reduction", color: "text-green-600" },
-        { metric: "0", description: "Manual Order Processing", color: "text-purple-600" },
-        { metric: "Automated", description: "Payment & Notifications", color: "text-orange-600" }
-    ];
+        { metric: '0 Manual', description: 'Order Tracking' },
+        { metric: 'Fully', description: 'Digitised Staff Workflow' },
+        { metric: 'Automatic', description: 'Payments & Notifications' },
+        { metric: 'Consistent', description: 'Operations Across All Staff' }
+    ]
 
     return (
         <div className="min-h-screen bg-white">
-            {/* Header */}
+            {/* HEADER */}
             <section className="py-12 bg-gradient-to-b from-gray-50 to-white border-b border-gray-100">
-                <div className="mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center mb-8">
-                        <Link
-                            href="/case-studies"
-                            className="inline-flex items-center text-kn-navy hover:text-kn-green transition-colors font-medium"
-                        >
-                            <ArrowLeft className="w-5 h-5 mr-2" />
-                            Back to Case Studies
-                        </Link>
-                    </div>
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <Link
+                        href="/our-work"
+                        className="inline-flex items-center text-kn-navy hover:text-kn-green font-medium mb-8"
+                    >
+                        <ArrowLeft className="w-5 h-5 mr-2" /> Back to Case Studies
+                    </Link>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <div className="inline-flex items-center bg-kn-green text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                            <div className="inline-flex items-center bg-kn-green text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                                 Live System
                             </div>
-                            <h1 className="text-4xl md:text-5xl font-bold text-kn-navy mb-6">
-                                Eurowash Launderette Smart System
+
+                            <h1 className="text-4xl md:text-5xl font-bold text-kn-navy mb-4 leading-tight">
+                                Eurowash Launderette Automation System
                             </h1>
-                            <p className="text-xl text-gray-600 leading-relaxed">
-                                Complete transformation from traditional launderette to fully automated 24/7 operation with smart lockers, payment processing, and management dashboard.
+
+                            <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+                                Eurowash already operated 24/7 as an unmanned launderette — but the
+                                operational workflow behind the scenes was entirely manual. Orders,
+                                charges, payment links, and customer updates were handled through paper
+                                notes and WhatsApp messages.
+                            </p>
+
+                            <p className="text-base text-gray-600 leading-relaxed">
+                                KN Consulting built a complete digital automation layer that integrates
+                                with their existing workflow, enabling structured staff operations,
+                                instant payment links, real-time tracking, and automated notifications.
                             </p>
 
                             <div className="flex flex-wrap gap-3 mt-6">
-                                {['Smart Lockers', 'Payment Integration', '24/7 Automation', 'Management Dashboard'].map((tag) => (
-                                    <span key={tag} className="bg-kn-green/10 text-kn-green px-3 py-1 rounded-full text-sm font-medium">
+                                {[
+                                    'Workflow Automation',
+                                    'Payment Integration',
+                                    'Staff Dashboard',
+                                    'Digital Locker Flow'
+                                ].map((tag) => (
+                                    <span
+                                        key={tag}
+                                        className="bg-kn-green/10 text-kn-green px-3 py-1 rounded-full text-sm font-medium"
+                                    >
                                         {tag}
                                     </span>
                                 ))}
                             </div>
                         </div>
 
-                        <div className="relative">
-                            <Image
-                                src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=1471&auto=format&fit=crop"
-                                alt="Modern launderette with smart automation systems"
-                                width={600}
-                                height={400}
-                                className="rounded-2xl shadow-xl"
-                            />
-                        </div>
+                        <Image
+                            src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=1471&auto=format&fit=crop"
+                            width={600}
+                            height={400}
+                            alt="Eurowash smart system"
+                            className="rounded-2xl shadow-xl object-cover"
+                        />
                     </div>
                 </div>
             </section>
 
-            {/* Challenge */}
+            {/* CHALLENGES */}
             <section className="py-20">
-                <div className="mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-4">The Challenge</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            Traditional launderette operations were limited by manual processes, restricted operating hours, and high staffing costs.
-                        </p>
-                    </div>
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl md:text-4xl font-bold text-kn-navy text-center mb-6">
+                        The Challenge
+                    </h2>
+                    <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-16">
+                        Eurowash wanted to keep their 24/7 unmanned model — but eliminate all manual
+                        admin and bring structure, speed, and automation to the workflow.
+                    </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {challenges.map((challenge, index) => (
-                            <ChallengeCard key={index} {...challenge} />
+                        {challenges.map((c, i) => (
+                            <ChallengeCard key={i} {...c} />
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Solution Overview */}
+            {/* SOLUTION */}
             <section className="py-20 bg-gray-50">
-                <div className="mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-4">Our Solution</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            A comprehensive automation system that eliminates manual processes and enables 24/7 operations without on-site staff.
-                        </p>
-                    </div>
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl md:text-4xl font-bold text-kn-navy text-center mb-6">
+                        Our Solution
+                    </h2>
+                    <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-16">
+                        A digital automation system designed to support staff, streamline customer
+                        communication, and completely remove manual tracking.
+                    </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                        {solutions.map((solution, index) => (
-                            <SolutionCard key={index} {...solution} />
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {solutions.map((s, i) => (
+                            <SolutionCard key={i} {...s} />
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Technical Features */}
+            {/* FEATURES */}
             <section className="py-20">
-                <div className="mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-4">System Features</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            Every component designed to work seamlessly together, creating a complete business automation solution.
-                        </p>
-                    </div>
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl md:text-4xl font-bold text-kn-navy text-center mb-6">
+                        System Features
+                    </h2>
+                    <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-16">
+                        Every part of the system works together to create a smooth, efficient,
+                        fully digitised operation.
+                    </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {features.map((feature, index) => (
-                            <FeatureCard key={index} {...feature} />
+                        {features.map((f, i) => (
+                            <FeatureCard key={i} {...f} />
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Results */}
+            {/* RESULTS */}
             <section className="py-20 bg-gradient-to-r from-kn-navy to-kn-green">
-                <div className="mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Results</h2>
-                        <p className="text-lg text-white/90 max-w-3xl mx-auto">
-                            Complete transformation of business operations with measurable improvements across all key metrics.
-                        </p>
-                    </div>
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">
+                        Results
+                    </h2>
+                    <p className="text-lg text-white/90 text-center max-w-3xl mx-auto mb-16">
+                        The final system brought structure, consistency, and automation to a
+                        previously manual workflow — without changing how the launderette operates.
+                    </p>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        {results.map((result, index) => (
-                            <div key={index} className="text-center">
+                        {results.map((r, i) => (
+                            <div key={i} className="text-center">
                                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                                    {result.metric}
+                                    {r.metric}
                                 </div>
-                                <div className="text-white/80 text-sm">
-                                    {result.description}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Technology Stack */}
-            <section className="py-20">
-                <div className="mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-4">Technology Used</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            Built with modern, reliable technologies to ensure system stability and scalability.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        {[
-                            { name: "Laravel", description: "Backend Framework" },
-                            { name: "Livewire", description: "Real-time Interface" },
-                            { name: "Stripe", description: "Payment Processing" },
-                            { name: "SMS/Email", description: "Notifications" }
-                        ].map((tech, index) => (
-                            <div key={index} className="text-center p-6 bg-gray-50 rounded-lg">
-                                <h3 className="font-semibold text-kn-navy mb-2">{tech.name}</h3>
-                                <p className="text-sm text-gray-600">{tech.description}</p>
+                                <div className="text-white/80 text-sm">{r.description}</div>
                             </div>
                         ))}
                     </div>
@@ -294,13 +310,14 @@ export default function EurowashCaseStudy() {
 
             {/* CTA */}
             <section className="py-20 bg-gray-50">
-                <div className="mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-6">
-                        Ready to Automate Your Business?
+                        Want to Automate Your Service Workflow?
                     </h2>
-                    <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                        See how we can transform your operations with custom automation systems. Pay only when you're completely satisfied.
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                        Let’s streamline your operations with a custom-built automation system.
                     </p>
+
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             href="/contact"
@@ -309,6 +326,7 @@ export default function EurowashCaseStudy() {
                             Start Your Project
                             <ArrowRight className="w-5 h-5 ml-2" />
                         </Link>
+
                         <Link
                             href="/our-work"
                             className="inline-flex items-center px-8 py-4 border border-kn-navy text-kn-navy font-semibold rounded-lg hover:bg-kn-navy/5 transition-colors"
@@ -319,5 +337,5 @@ export default function EurowashCaseStudy() {
                 </div>
             </section>
         </div>
-    );
+    )
 }

@@ -4,11 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const navLinks = [
-  { name: 'Home', href: '/', ariaLabel: 'Go to homepage' },
-  { name: 'Services', href: '/services', ariaLabel: 'View our services' },
-  { name: 'Case Studies', href: '/case-studies', ariaLabel: 'Explore our case studies' },
-  { name: 'About Us', href: '/about', ariaLabel: 'Learn about our company' },
-  { name: 'Insights', href: '/blog', ariaLabel: 'Read our latest insights' }
+  { name: 'Home', href: '/', ariaLabel: 'Visit KN Consulting homepage' },
+  { name: 'Services', href: '/services', ariaLabel: 'Explore our digital services and solutions' },
+  { name: 'Our Work', href: '/our-work', ariaLabel: 'View case studies and real client results' },
+  { name: 'About', href: '/about', ariaLabel: 'Learn about KN Consulting and our founder' },
 ];
 
 const NavLink = ({ href, children, ariaLabel }) => (
@@ -30,7 +29,7 @@ const CtaButton = () => (
     className="bg-kn-green text-white font-semibold px-4 py-2 rounded-md hover:bg-kn-green/90 transition duration-200 shadow-sm inline-block"
     role="button"
   >
-    Get in touch
+    Speak With Us
   </Link>
 );
 
@@ -39,7 +38,7 @@ const Logo = () => (
   <Link href="/" className="flex items-center space-x-2" aria-label="KN Consulting homepage">
     <Image
       src="/logo-png.png"
-      alt="KN Consulting Logo"
+      alt="KN Consulting & Innovation Ltd Logo"
       width={350}
       height={40}
       priority
@@ -55,7 +54,7 @@ const MobileMenu = ({ isOpen, links }) => {
   return (
     <nav
       className="absolute top-16 right-0 bg-white shadow-lg rounded-md p-4 w-48"
-      aria-label="Mobile navigation"
+      aria-label="Mobile menu for KN Consulting website"
       role="navigation"
     >
       {links.map((link) => (

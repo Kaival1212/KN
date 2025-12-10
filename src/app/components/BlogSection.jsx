@@ -40,11 +40,10 @@ export default async function HomeBlogSection() {
                 {/* Header */}
                 <div className="text-center mb-14">
                     <h2 className="text-4xl font-bold text-gray-900">
-                        Latest Insights & Updates
+                        Insights, Strategy & Innovation
                     </h2>
                     <p className="text-gray-600 mt-3 max-w-xl mx-auto">
-                        Articles on automation, software, AI security, loyalty systems and
-                        digital transformation — written by KN Consulting.
+                        Expert perspectives on software, automation, AI, digital strategy, and customer experience—written by the team at KN Consulting.
                     </p>
                 </div>
 
@@ -65,12 +64,12 @@ export default async function HomeBlogSection() {
 
                             {/* Description */}
                             <p className="text-gray-600 mt-3 line-clamp-3">
-                                {post.brief || "Read more on our blog"}
+                                {post.brief || "Explore the full article"}
                             </p>
 
                             {/* Read More */}
                             <div className="mt-5 flex items-center text-kn-green font-medium group-hover:underline">
-                                Read More
+                                Continue Reading
                                 <svg
                                     className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
                                     fill="none"
@@ -95,7 +94,7 @@ export default async function HomeBlogSection() {
                         className="px-8 py-3 rounded-full bg-kn-green text-white font-semibold shadow-md hover:bg-kn-green/90 transition"
                         target="_blank"
                     >
-                        View All Articles
+                        Explore All Insights
                     </a>
                 </div>
             </div>

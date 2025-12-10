@@ -4,7 +4,6 @@ import { ArrowRight, Zap } from "lucide-react";
 import Service from "@/app/components/Service";
 import CaseStudiesSection from "./components/CaseStudiesSection";
 import AboutSection from "./components/AboutSection";
-import TestimonialsSection from "./components/TestimonialsSection";
 import BlogSection from "./components/BlogSection";
 
 // Simple, clean button component
@@ -25,7 +24,7 @@ const ActionButton = ({ href, variant = "primary", children }) => {
 // Simple trust badge
 const TrustBadge = () => (
   <div className="absolute -top-4 -right-4 bg-kn-green text-white px-4 py-2 rounded-lg text-sm font-medium">
-    Pay When Satisfied
+    Results You Can Trust
   </div>
 );
 
@@ -35,7 +34,7 @@ const HeroImage = () => (
     <div className="relative rounded-2xl overflow-hidden shadow-xl">
       <Image
         src="/hero_image.avif"
-        alt="Business automation systems"
+        alt="Premium digital solutions for modern businesses"
         width={600}
         height={400}
         className="object-cover w-full h-full"
@@ -52,34 +51,35 @@ const HeroText = () => (
     {/* Simple status badge */}
     <div className="inline-flex items-center gap-2 bg-kn-green/10 text-kn-green px-4 py-2 rounded-full text-sm font-medium">
       <div className="w-2 h-2 bg-kn-green rounded-full"></div>
-      Live systems operating 24/7
+      Trusted Digital Solutions Operating 24/7
     </div>
 
+    {/* premium websites, apps, and automation systems that elevate your entire business */}
     {/* Clear, focused headline */}
     <h1 className="text-5xl md:text-6xl font-bold text-kn-navy leading-tight">
-      We build{" "}
-      <span className="text-kn-green">working systems</span>{" "}
-      that actually{" "}
-      <span className="text-kn-green">run your business</span>
+      We engineer{" "}
+      <span className="text-kn-green">real-world systems</span>{" "}
+      that elevate{" "}
+      <span className="text-kn-green">your entire business  </span>
     </h1>
 
     {/* Simple, powerful subheading */}
     <p className="text-xl text-gray-600 leading-relaxed">
-      Not websites that collect dust. Not apps nobody uses.
-      Real automation systems that work while you sleep.{" "}
-      <span className="font-semibold text-kn-green">Pay only when you&apos;re completely satisfied.</span>
+      We create high-performing websites, intuitive apps, and intelligent software that deliver measurable impact.{" "}
+      Every system is engineered to reduce manual work, enhance customer experience, and drive revenue{" "}
+      <span className="font-semibold text-kn-green">You invest only when the results meet our standard—and yours.</span>
     </p>
 
     {/* Clean CTA buttons */}
     <div className="flex flex-col sm:flex-row gap-4">
       <ActionButton href="/contact" variant="primary">
         <Zap className="w-5 h-5" />
-        Start Automating Now
+        Book a Free Consultation
         <ArrowRight className="w-5 h-5" />
       </ActionButton>
 
-      <ActionButton href="/case-studies" variant="outline">
-        See Live Systems
+      <ActionButton href="/our-work" variant="outline">
+        See Our Work
       </ActionButton>
     </div>
   </div>
@@ -118,7 +118,7 @@ export default function Home() {
       {/* Consider removing these to reduce clutter */}
       <BlogSection />
       <AboutSection />
-            
+
       <div className="elfsight-app-48d4cd78-4a23-4b5f-bcc1-4f9497937d4c" data-elfsight-app-lazy></div>
 
     </>

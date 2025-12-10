@@ -11,18 +11,17 @@ const AboutSection = () => {
                     {/* Text Content */}
                     <div className="order-2 lg:order-1">
                         <h2 className="text-4xl font-extrabold mb-6 text-gray-900">
-                            About KN Consulting
+                            Who We Are
                         </h2>
                         <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                            We're a passionate team of tech specialists who solve real business problems with innovative digital solutions. Unlike others who focus on flashy portfolios, we prioritize developing functional tools that streamline your workflows.
-                        </p>
+                            KN Consulting & Innovation Ltd is a digital solutions firm specialising in the design and development of high-performance websites, mobile apps, custom software, and automation systems. Our work is grounded in engineering precision, operational efficiency, and long-term scalability—ensuring every solution delivers meaningful business impact from the moment it goes live.                 </p>
 
                         <ul className="space-y-4 mb-8">
                             {[
-                                'Small, agile team with broad technical expertise',
-                                'Focus on practical solutions that solve real business problems',
-                                'Expertise in Laravel, SwiftUI, React, and automation systems',
-                                'Ongoing support and maintenance for long-term success',
+                                'Agile, high-skill team with deep technical expertise across modern frameworks',
+                                'Focused on building systems that improve operations, reduce manual work, and scale with your business',
+                                'Engineering expertise across Laravel, SwiftUI, React, automation workflows, and custom software development',
+                                'Long-term support and continuous improvement to keep your systems performing at the highest level',
                             ].map((item) => (
                                 <li key={item} className="flex items-start">
                                     <CheckCircle className="h-6 w-6 text-kn-green mr-3 mt-1 flex-shrink-0" />
@@ -36,7 +35,7 @@ const AboutSection = () => {
                                 type="button"
                                 className="inline-block bg-kn-navy hover:bg-kn-navy/90 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-200"
                             >
-                                More About Us
+                                Learn More About Us
                             </button>
                         </Link>
                     </div>

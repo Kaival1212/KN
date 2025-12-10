@@ -1,74 +1,94 @@
 import "./globals.css";
 import NavBar from "@/app/components/NavBar"
+import Fotter from "@/app/components/Fotter";
 import Script from "next/script";
 
 
 export const metadata = {
   title: {
-    default: 'KN Consulting',
-    template: '%s | KN Consulting',
+    default: "KN Consulting & Innovation Ltd",
+    template: "%s | KN Consulting & Innovation Ltd",
   },
-  description: 'Empowering small businesses with tailored technology solutions — from automation to digital transformation.',
+
+  description:
+    "KN Consulting & Innovation Ltd builds high-performance software, automation systems, digital loyalty programs, and bespoke technology solutions for growth-focused businesses across the UK.",
+
   keywords: [
-    'KN Consulting',
-    'business automation',
-    'digital transformation',
-    'custom software',
-    'London tech consulting',
-    'small business solutions',
-    'web development',
-    'mobile apps',
-    'Raspberry Pi projects',
+    "KN Consulting & Innovation Ltd",
+    "business automation UK",
+    "digital loyalty systems",
+    "custom software development London",
+    "mobile apps UK",
+    "web development agency",
+    "automation consultancy",
+    "software for small businesses",
+    "digital transformation partner",
+    "Laravel agency UK",
+    "Next.js development UK",
   ],
-  metadataBase: new URL('https://knconsulting.uk'),
+
+  metadataBase: new URL("https://knconsulting.uk"),
+
   openGraph: {
-    title: 'KN Consulting',
-    description: 'Empowering small businesses with tailored technology solutions — from automation to digital transformation.',
-    url: 'https://knconsulting.uk',
-    siteName: 'KN Consulting',
+    title: "KN Consulting & Innovation Ltd",
+    description:
+      "A London-based consulting and technology studio helping businesses streamline operations through automation, loyalty systems, custom software, and powerful digital solutions.",
+    url: "https://knconsulting.uk",
+    siteName: "KN Consulting & Innovation Ltd",
     images: [
       {
-        url: 'https://knconsulting.uk/og-image.png',
+        url: "https://knconsulting.uk/og-image.png",
         width: 1200,
         height: 630,
-        alt: 'KN Consulting – Technology Solutions for Small Businesses',
+        alt: "KN Consulting & Innovation Ltd – Custom Software, Automation & Digital Loyalty Systems",
       },
     ],
-    locale: 'en_GB',
-    type: 'website',
+    locale: "en_GB",
+    type: "website",
   },
+
   twitter: {
-    card: 'summary_large_image',
-    title: 'KN Consulting',
-    description: 'Empowering small businesses with tailored technology solutions — from automation to digital transformation.',
-    creator: '@knconsulting',
-    images: ['https://knconsulting.uk/og-image.png'],
+    card: "summary_large_image",
+    title: "KN Consulting & Innovation Ltd",
+    description:
+      "Custom software, automation, loyalty systems and digital transformation solutions for UK businesses.",
+    creator: "@knconsulting",
+    images: ["https://knconsulting.uk/og-image.png"],
   },
+
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
-  manifest: '/site.webmanifest',
-  applicationName: 'KN Consulting',
-  generator: 'Next.js',
-  referrer: 'origin-when-cross-origin',
-  authors: [{ name: 'Kaival Patel', url: 'https://knconsulting.uk/about' }],
-  creator: 'Kaival Patel',
-  publisher: 'KN Consulting',
+
+  manifest: "/site.webmanifest",
+  applicationName: "KN Consulting & Innovation Ltd",
+
+  generator: "Next.js",
+  referrer: "origin-when-cross-origin",
+
+  authors: [
+    { name: "Kaival Patel", url: "https://knconsulting.uk/about" },
+  ],
+
+  creator: "KN Consulting & Innovation Ltd",
+  publisher: "KN Consulting & Innovation Ltd",
+
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
+
   alternates: {
-    canonical: '/',
-    languages: {
-      'en-GB': '/',
-    },
+    canonical: "/",
+    languages: { "en-GB": "/" },
   },
-  category: 'technology',
+
+  category: "Technology Consulting",
 };
+
 
 
 export default function RootLayout({ children }) {
@@ -89,6 +109,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
 
+        <Fotter />
       </body>
     </html>
   );

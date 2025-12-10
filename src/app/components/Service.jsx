@@ -5,45 +5,45 @@ import { Shield, Cog, Smartphone, Users, Headphones, ArrowRight, Clock, Zap } fr
 const services = [
     {
         icon: <Cog size={24} />,
-        title: 'Business Automation Systems',
+        title: 'Automation & Intelligent Software Systems',
         description:
-            'Complete automation solutions like smart locker systems, property management software, and custom workflows that eliminate manual processes.',
+            'Powerful automation and custom software solutions engineered to remove manual work—ranging from smart locker systems to full property management platforms and tailored operational workflows.',
         features: ['24/7 Operation', 'Staff Reduction', 'Custom Workflows'],
         badge: 'Most Popular',
         href: '/services#automation',
     },
     {
         icon: <Shield size={24} />,
-        title: 'Loyalty Programs & Customer Retention',
+        title: 'Digital Loyalty & Customer Experience Systems',
         description:
-            'digital loyalty programs that keep your customers coming back. We build easy-to-use systems integrated with Apple Wallet and Google Pay.',
+            'Advanced digital loyalty systems integrated with Apple Wallet and Google Wallet—designed to increase repeat visits and create a measurable customer database.',
         features: ['Digital Punch Cards', 'Tiered Rewards', 'Referral Tracking'],
         badge: 'Proven Results',
         href: '/services#loyalty-programs',
     },
     {
         icon: <Users size={24} />,
-        title: 'Startup Technical Partnerships',
+        title: 'Technical Partnership for Startups',
         description:
-            'Reduced-rate development in exchange for equity. We become your technical co-founder and help turn your idea into a working business.',
+            'We partner with early-stage founders to provide senior-level technical leadership, product development, and long-term engineering support—structured through tailored equity agreements.',
         features: ['Equity-based', 'Co-founder Level', 'Long-term Partnership'],
         badge: 'New',
         href: '/services#partnerships',
     },
     {
         icon: <Smartphone size={24} />,
-        title: 'Working Software Solutions',
+        title: 'Websites, Apps & Custom Software',
         description:
-            'Interactive mobile applications and websites that your team actually uses daily - not static websites that collect dust.',
+            'High-performance websites, mobile apps, and custom software built for real daily use—not generic templates or static pages that become obsolete.',
         features: ['User-friendly Design', 'Team Training', 'Real-time Data'],
         badge: null,
         href: '/services#development',
     },
     {
         icon: <Headphones size={24} />,
-        title: 'Ongoing Support & Maintenance',
+        title: 'Managed Support & Continuous Improvement',
         description:
-            'Monthly server hosting, system updates, bug fixes, and feature additions to keep your solutions running smoothly.',
+            'End-to-end management including hosting, monitoring, proactive updates, bug resolution, and continuous feature enhancements to ensure long-term performance.',
         features: ['24/7 Monitoring', 'Regular Updates', 'Direct Support'],
         badge: null,
         href: '/services#maintenance',
@@ -51,9 +51,9 @@ const services = [
 ]
 
 const stats = [
-    { icon: <Zap size={20} />, number: '50%', label: 'Average efficiency increase' },
-    { icon: <Clock size={20} />, number: '24/7', label: 'Automated operations' },
-    { icon: <Users size={20} />, number: '100%', label: 'Client satisfaction' },
+    { icon: <Zap size={20} />, number: '50%', label: 'Operational Efficiency Improvement' },
+    { icon: <Clock size={20} />, number: '24/7', label: 'Fully Automated Operations' },
+    { icon: <Users size={20} />, number: '100%', label: 'Client Satisfaction Rate' },
 ]
 
 function ServiceCard({ icon, title, description, features, badge, href }) {
@@ -123,11 +123,10 @@ export default function Service() {
             <div className="container mx-auto">
                 <div className="text-center mb-16">
                     <h2 id="services-heading" className="text-3xl md:text-4xl font-bold mb-4">
-                        Our Services
+                        What We Deliver
                     </h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-                        We build working systems that solve real business problems - from automation to security to technical partnerships. Every solution is designed to work from day one.
-                    </p>
+                        We design and build high-performance websites, apps, automation systems, and custom software that solve real business challenges from day one. Every solution is engineered for reliability, scalability, and measurable impact.                    </p>
 
                     {/* Stats Section */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
@@ -137,7 +136,7 @@ export default function Service() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((svc) => (
                         <ServiceCard
                             key={svc.title}
@@ -150,24 +149,6 @@ export default function Service() {
                         />
                     ))}
                 </div>
-                {/* 
-                <div className="text-center mt-16">
-                    <div className="bg-gradient-to-r from-kn-navy to-kn-green p-8 rounded-2xl text-white">
-                        <h3 className="text-2xl font-bold mb-4">
-                            Ready to automate your business?
-                        </h3>
-                        <p className="text-lg mb-6 opacity-90">
-                            Get started with a free consultation and see how we can transform your operations.
-                        </p>
-                        <Link
-                            href="/contact"
-                            className="inline-flex items-center bg-white text-kn-navy px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                        >
-                            Start Your Project
-                            <ArrowRight className="w-5 h-5 ml-2" />
-                        </Link>
-                    </div>
-                </div> */}
             </div>
         </section>
     )

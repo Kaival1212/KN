@@ -1,31 +1,40 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, ArrowRight, Home, Users, FileText, AlertCircle, CheckCircle, Clock } from 'lucide-react'
+import {
+  ArrowLeft,
+  ArrowRight,
+  Home,
+  Users,
+  FileText,
+  AlertCircle,
+  CheckCircle,
+  Clock,
+} from 'lucide-react'
 
 const ChallengeCard = ({ icon, title, description }) => (
-  <div className="bg-red-50 p-6 rounded-lg border border-red-100">
+  <div className="bg-amber-50 p-6 rounded-lg border border-amber-100">
     <div className="flex items-center mb-3">
-      <div className="p-2 bg-red-100 rounded-lg mr-3">
+      <div className="p-2 bg-amber-100 rounded-lg mr-3">
         {icon}
       </div>
-      <h3 className="font-semibold text-red-800">{title}</h3>
+      <h3 className="font-semibold text-amber-900">{title}</h3>
     </div>
-    <p className="text-red-700 text-sm">{description}</p>
+    <p className="text-amber-800 text-sm">{description}</p>
   </div>
-);
+)
 
 const SolutionCard = ({ icon, title, description }) => (
-  <div className="bg-green-50 p-6 rounded-lg border border-green-100">
+  <div className="bg-kn-green/5 p-6 rounded-lg border border-kn-green/20">
     <div className="flex items-center mb-3">
-      <div className="p-2 bg-green-100 rounded-lg mr-3 text-green-600">
+      <div className="p-2 bg-kn-green/10 rounded-lg mr-3 text-kn-green">
         {icon}
       </div>
-      <h3 className="font-semibold text-green-800">{title}</h3>
+      <h3 className="font-semibold text-kn-navy">{title}</h3>
     </div>
-    <p className="text-green-700 text-sm">{description}</p>
+    <p className="text-gray-700 text-sm">{description}</p>
   </div>
-);
+)
 
 const FeatureCard = ({ icon, title, description, details }) => (
   <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
@@ -38,111 +47,123 @@ const FeatureCard = ({ icon, title, description, details }) => (
     <p className="text-gray-600 mb-4">{description}</p>
     <ul className="space-y-2">
       {details.map((detail, index) => (
-        <li key={index} className="flex items-start text-sm text-gray-700">
+        <li
+          key={index}
+          className="flex items-start text-sm text-gray-700"
+        >
           <CheckCircle className="w-4 h-4 text-kn-green mr-2 mt-0.5 flex-shrink-0" />
           {detail}
         </li>
       ))}
     </ul>
   </div>
-);
+)
 
 export default function PropertyCaseStudy() {
   const challenges = [
     {
-      icon: <FileText className="w-5 h-5 text-red-600" />,
-      title: "Manual Record Keeping",
-      description: "Paper-based tenant records, rent tracking, and maintenance requests creating inefficiencies and errors."
+      icon: <FileText className="w-5 h-5 text-amber-700" />,
+      title: 'Fragmented Records',
+      description:
+        'Tenant information, lease documents, rent records, and maintenance notes stored across paper files, spreadsheets, and inboxes—making it difficult to access reliable data quickly.',
     },
     {
-      icon: <AlertCircle className="w-5 h-5 text-red-600" />,
-      title: "Communication Gaps",
-      description: "Scattered communications across phone, email, and text making tenant management chaotic."
+      icon: <AlertCircle className="w-5 h-5 text-amber-700" />,
+      title: 'Inconsistent Communications',
+      description:
+        'Conversations spread across phone, email, and messaging, leading to missed updates, slow response times, and a poor tenant experience.',
     },
     {
-      icon: <Clock className="w-5 h-5 text-red-600" />,
-      title: "Time-Consuming Tasks",
-      description: "Hours spent on administrative tasks that could be automated, reducing focus on business growth."
-    }
-  ];
+      icon: <Clock className="w-5 h-5 text-amber-700" />,
+      title: 'High Administrative Overhead',
+      description:
+        'Significant time spent on manual follow-ups, chasing payments, and coordinating maintenance instead of focusing on portfolio growth and strategy.',
+    },
+  ]
 
   const solutions = [
     {
       icon: <Home className="w-5 h-5" />,
-      title: "Centralized Management",
-      description: "Single platform for all property management tasks including tenant records and rent tracking."
+      title: 'Single Source of Truth',
+      description:
+        'A central platform for tenants, properties, leases, and financials—giving management a clear real-time picture of the entire portfolio.',
     },
     {
       icon: <Users className="w-5 h-5" />,
-      title: "Automated Communications",
-      description: "Streamlined tenant communications with automated notifications and updates."
+      title: 'Structured Communications',
+      description:
+        'Standardised communication flows and automated notifications for key events, reducing manual follow-up and missed messages.',
     },
     {
       icon: <CheckCircle className="w-5 h-5" />,
-      title: "Workflow Automation",
-      description: "Automated maintenance requests, rent reminders, and administrative processes."
-    }
-  ];
+      title: 'Workflow Automation',
+      description:
+        'Automation of recurring processes such as rent reminders, maintenance workflows, and document tracking to reduce routine admin work.',
+    },
+  ]
 
   const features = [
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Tenant Management",
-      description: "Complete tenant lifecycle management system",
+      title: 'Tenant Management',
+      description: 'End-to-end tenant lifecycle management on one platform.',
       details: [
-        "Digital tenant profiles and documents",
-        "Lease agreement tracking",
-        "Contact information management",
-        "Tenant communication history"
-      ]
+        'Digital tenant profiles and documentation',
+        'Lease agreement tracking and status',
+        'Structured contact and communication records',
+        'Tenant history and activity overview',
+      ],
     },
     {
       icon: <FileText className="w-6 h-6" />,
-      title: "Rent Tracking",
-      description: "Automated rent collection and financial management",
+      title: 'Rent & Revenue Tracking',
+      description:
+        'Visibility and control over rental income, arrears, and payment patterns.',
       details: [
-        "Monthly rent tracking and reminders",
-        "Payment history and reporting",
-        "Overdue payment notifications",
-        "Financial dashboard and analytics"
-      ]
+        'Automated rent reminders and due dates',
+        'Payment history and reconciliation',
+        'Overdue payment flags and alerts',
+        'Portfolio-level financial reporting',
+      ],
     },
     {
       icon: <AlertCircle className="w-6 h-6" />,
-      title: "Maintenance Requests",
-      description: "Streamlined maintenance and repair management",
+      title: 'Maintenance Management',
+      description:
+        'A structured, trackable process for maintenance and repair work.',
       details: [
-        "Online maintenance request submission",
-        "Priority-based request handling",
-        "Contractor management system",
-        "Maintenance history tracking"
-      ]
+        'Online maintenance request submission',
+        'Priority and SLA-based handling',
+        'Contractor assignment and notes',
+        'Historical maintenance log per property',
+      ],
     },
     {
       icon: <Home className="w-6 h-6" />,
-      title: "Property Portfolio",
-      description: "Multi-property management capabilities",
+      title: 'Portfolio Overview',
+      description:
+        'Top-level visibility across multiple properties and units.',
       details: [
-        "Property details and documentation",
-        "Portfolio overview dashboard",
-        "Property-specific reporting",
-        "Scalable multi-property support"
-      ]
-    }
-  ];
+        'Key metrics by property and portfolio',
+        'Unified property records and documents',
+        'Property-level performance insights',
+        'Scalable structure for future acquisitions',
+      ],
+    },
+  ]
 
   const expectedResults = [
-    { metric: "50%", description: "Time Savings", color: "text-blue-600" },
-    { metric: "100%", description: "Digital Records", color: "text-green-600" },
-    { metric: "Automated", description: "Communications", color: "text-purple-600" },
-    { metric: "Real-time", description: "Updates", color: "text-orange-600" }
-  ];
+    { metric: '50%', description: 'Reduction in admin time' },
+    { metric: '100%', description: 'Digital portfolio visibility' },
+    { metric: 'Automated', description: 'Key tenant communications' },
+    { metric: 'Real-time', description: 'Operational updates' },
+  ]
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
+      {/* Header / Executive Summary */}
       <section className="py-12 bg-gradient-to-b from-gray-50 to-white border-b border-gray-100">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center mb-8">
             <Link
               href="/our-work"
@@ -152,51 +173,71 @@ export default function PropertyCaseStudy() {
               Back to Case Studies
             </Link>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                In Development
+              <div className="inline-flex items-center bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                In Development · Property Management Platform
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-kn-navy mb-6">
-                Property Management System
+              <h1 className="text-4xl md:text-5xl font-bold text-kn-navy mb-4 leading-tight">
+                Custom Property Management Platform for a Multi-Property Portfolio
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Custom tenant management, rent tracking, and automated communications system currently being developed for multi-property portfolio management.
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                KN Consulting is designing and building a centralised, automation-led
+                property management platform to replace fragmented processes and give
+                ownership teams real-time visibility across their portfolio.
               </p>
-              
+              <p className="text-base text-gray-600 leading-relaxed">
+                The system brings together tenant management, rent and revenue
+                tracking, maintenance workflows, and portfolio reporting into a single
+                digital environment—removing manual effort and improving control.
+              </p>
+
               <div className="flex flex-wrap gap-3 mt-6">
-                {['Property Management', 'Tenant Portal', 'Automated Workflows', 'Financial Tracking'].map((tag) => (
-                  <span key={tag} className="bg-kn-green/10 text-kn-green px-3 py-1 rounded-full text-sm font-medium">
+                {[
+                  'Multi-Property Management',
+                  'Tenant Lifecycle',
+                  'Automation & Workflows',
+                  'Financial Oversight',
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="bg-kn-green/10 text-kn-green px-3 py-1 rounded-full text-sm font-medium"
+                  >
                     {tag}
                   </span>
                 ))}
               </div>
             </div>
-            
+
             <div className="relative">
               <Image
                 src="https://images.unsplash.com/photo-1560472355-536de3962603?q=80&w=1471&auto=format&fit=crop"
-                alt="Modern property management system interface"
+                alt="Modern property management system interface displayed on a laptop"
                 width={600}
                 height={400}
-                className="rounded-2xl shadow-xl"
+                className="rounded-2xl shadow-xl object-cover"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Challenge */}
+      {/* The Challenge */}
       <section className="py-20">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-4">The Challenge</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-4">
+              Business Context & Challenges
+            </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Managing multiple properties with manual processes leads to inefficiencies, communication gaps, and administrative overhead.
+              Managing a growing property portfolio through manual processes and
+              disconnected tools creates risk, inconsistency, and a lack of
+              operational oversight. The client required a scalable, centralised
+              solution to support future growth.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {challenges.map((challenge, index) => (
               <ChallengeCard key={index} {...challenge} />
@@ -205,28 +246,39 @@ export default function PropertyCaseStudy() {
         </div>
       </section>
 
-      {/* Development Status */}
+      {/* Development / Approach */}
       <section className="py-20 bg-gray-50">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-4">Development Progress</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-4">
+              Our Approach & Current Status
+            </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Currently building a comprehensive property management solution with close client collaboration to ensure every feature meets real-world needs.
+              KN Consulting is following a structured, consulting-led approach:
+              understanding current workflows, designing the target operating model,
+              and then engineering a platform aligned to those real-world needs.
             </p>
           </div>
-          
-          <div className="bg-white p-8 rounded-2xl shadow-lg max-w-4xl mx-auto">
+
+          <div className="bg-white p-8 rounded-2xl shadow-lg max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-2xl font-bold text-kn-navy mb-6">Development Approach</h3>
+                <h3 className="text-2xl font-bold text-kn-navy mb-6">
+                  Delivery Methodology
+                </h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="w-8 h-8 bg-kn-green text-white rounded-full flex items-center justify-center text-sm font-semibold mr-4 flex-shrink-0">
                       1
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">Requirements Analysis</h4>
-                      <p className="text-gray-600 text-sm">Understanding specific property management workflows and pain points</p>
+                      <h4 className="font-semibold text-gray-900">
+                        Discovery & Workflow Mapping
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        Detailed review of current processes, tools, and pain points
+                        across tenant, financial, and maintenance workflows.
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -234,49 +286,68 @@ export default function PropertyCaseStudy() {
                       2
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">Custom Development</h4>
-                      <p className="text-gray-600 text-sm">Building tailored features for multi-property management needs</p>
+                      <h4 className="font-semibold text-gray-900">
+                        Solution Architecture & Design
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        Defining the core modules, data structure, and automation
+                        logic required to support multi-property operations.
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center text-sm font-semibold mr-4 flex-shrink-0">
+                    <div className="w-8 h-8 bg-gray-300 text-gray-700 rounded-full flex items-center justify-center text-sm font-semibold mr-4 flex-shrink-0">
                       3
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-500">Testing & Refinement</h4>
-                      <p className="text-gray-500 text-sm">Comprehensive testing with real property management scenarios</p>
+                      <h4 className="font-semibold text-gray-800">
+                        Implementation & Iteration
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        Configuring and building the platform with client feedback
+                        loops to ensure alignment with daily operations.
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center text-sm font-semibold mr-4 flex-shrink-0">
+                    <div className="w-8 h-8 bg-gray-300 text-gray-700 rounded-full flex items-center justify-center text-sm font-semibold mr-4 flex-shrink-0">
                       4
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-500">Launch & Support</h4>
-                      <p className="text-gray-500 text-sm">System deployment with ongoing support and feature additions</p>
+                      <h4 className="font-semibold text-gray-800">
+                        Launch, Training & Ongoing Support
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        Structured rollout, team training, and continued support for
+                        optimisation and future feature development.
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-gradient-to-br from-kn-green/10 to-blue-500/10 p-6 rounded-xl">
-                <h4 className="font-semibold text-kn-navy mb-4">Current Status</h4>
-                <div className="space-y-3">
+                <h4 className="font-semibold text-kn-navy mb-4">
+                  Current Project Status
+                </h4>
+                <div className="space-y-3 text-sm">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Planning:</span>
-                    <span className="font-semibold text-kn-green">Complete</span>
+                    <span className="text-gray-600">Discovery & Planning:</span>
+                    <span className="font-semibold text-kn-green">Completed</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Development:</span>
+                    <span className="text-gray-600">Core Development:</span>
                     <span className="font-semibold text-orange-500">In Progress</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Testing:</span>
-                    <span className="font-semibold text-gray-400">Pending</span>
+                    <span className="text-gray-600">User Testing:</span>
+                    <span className="font-semibold text-gray-400">Scheduled</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Launch:</span>
-                    <span className="font-semibold text-gray-400">Scheduled</span>
+                    <span className="text-gray-600">Production Launch:</span>
+                    <span className="font-semibold text-gray-400">
+                      Planned post-UAT
+                    </span>
                   </div>
                 </div>
               </div>
@@ -287,14 +358,18 @@ export default function PropertyCaseStudy() {
 
       {/* Solution Overview */}
       <section className="py-20">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-4">Our Solution</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-4">
+              Target Solution Overview
+            </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A comprehensive property management system designed to automate administrative tasks and streamline tenant communications.
+              The solution is designed as a centralised property management platform
+              that standardises processes, increases transparency, and supports
+              future growth in a scalable way.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
               <SolutionCard key={index} {...solution} />
@@ -303,16 +378,19 @@ export default function PropertyCaseStudy() {
         </div>
       </section>
 
-      {/* Technical Features */}
+      {/* Technical / Functional Features */}
       <section className="py-20 bg-gray-50">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-4">System Features</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-4">
+              Core Capabilities
+            </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive property management tools designed for efficiency and scalability across multiple properties.
+              The platform brings together tenant, financial, maintenance, and
+              portfolio functions into a coherent, easy-to-operate system.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <FeatureCard key={index} {...feature} />
@@ -323,23 +401,25 @@ export default function PropertyCaseStudy() {
 
       {/* Expected Results */}
       <section className="py-20 bg-gradient-to-r from-kn-navy to-kn-green">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Expected Results</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Expected Business Outcomes
+            </h2>
             <p className="text-lg text-white/90 max-w-3xl mx-auto">
-              Anticipated improvements in efficiency, organization, and tenant satisfaction upon system completion.
+              Once fully deployed, the platform is expected to significantly reduce
+              administrative workload, improve data visibility, and enhance the
+              tenant experience across the portfolio.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {expectedResults.map((result, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                   {result.metric}
                 </div>
-                <div className="text-white/80 text-sm">
-                  {result.description}
-                </div>
+                <div className="text-white/80 text-sm">{result.description}</div>
               </div>
             ))}
           </div>
@@ -348,22 +428,28 @@ export default function PropertyCaseStudy() {
 
       {/* Technology Stack */}
       <section className="py-20">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-4">Technology Stack</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-4">
+              Technology Backbone
+            </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Modern, reliable technologies chosen for scalability and long-term maintainability.
+              The solution is built on a modern, proven technology stack chosen for
+              reliability, performance, and long-term maintainability.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { name: "Laravel", description: "Backend Framework" },
-              { name: "Database", description: "Data Management" },
-              { name: "Notifications", description: "Communications" },
-              { name: "Dashboard", description: "Admin Interface" }
+              { name: 'Laravel', description: 'Application backend and APIs' },
+              { name: 'Relational Database', description: 'Structured data storage' },
+              { name: 'Notification Services', description: 'Email / message alerts' },
+              { name: 'Admin Dashboard', description: 'Operational control centre' },
             ].map((tech, index) => (
-              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg">
+              <div
+                key={index}
+                className="text-center p-6 bg-gray-50 rounded-lg border border-gray-100"
+              >
                 <h3 className="font-semibold text-kn-navy mb-2">{tech.name}</h3>
                 <p className="text-sm text-gray-600">{tech.description}</p>
               </div>
@@ -374,12 +460,14 @@ export default function PropertyCaseStudy() {
 
       {/* CTA */}
       <section className="py-20 bg-gray-50">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-6">
-            Need Property Management Automation?
+            Exploring a Property Management Platform for Your Portfolio?
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            See how we can streamline your property management operations with custom automation systems. Pay only when you're completely satisfied.
+            Speak with KN Consulting about building a property management system
+            tailored to your portfolio and operating model. We focus on systems that
+            deliver measurable operational impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -399,5 +487,5 @@ export default function PropertyCaseStudy() {
         </div>
       </section>
     </div>
-  );
+  )
 }
