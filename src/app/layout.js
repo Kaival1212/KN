@@ -97,12 +97,8 @@ export default function RootLayout({ children }) {
       <head>
         <Script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="646bffc5-94ca-49dd-9203-74e3ed314193" type="text/javascript" strategy="beforeInteractive"></Script>
         <Script src="https://elfsightcdn.com/platform.js" async></Script>
-        <Script
-          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-          async
-          defer
-          strategy="beforeInteractive"
-        ></Script>
+        <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />
+
       </head>
       <body
         className="antialiased"
