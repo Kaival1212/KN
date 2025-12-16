@@ -1,7 +1,9 @@
 import "./globals.css";
-import NavBar from "@/app/components/NavBar"
-import Fotter from "@/app/components/Fotter";
+import Fotter from "./components/Fotter";
 import Script from "next/script";
+import NavBar from './components/NavBar';
+import { sfProDisplay } from "./fonts";
+
 
 
 export const metadata = {
@@ -101,7 +103,7 @@ export default function RootLayout({ children }) {
 
       </head>
       <body
-        className="antialiased"
+        className={`antialiased ${sfProDisplay.variable}`}
       >
         <div id="cookie-declaration" className="cookie-declaration"></div>
 

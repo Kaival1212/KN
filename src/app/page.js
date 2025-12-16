@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Zap } from "lucide-react";
-import Service from "@/app/components/Service";
+import Service from "./components/Service";
 import CaseStudiesSection from "./components/CaseStudiesSection";
 import AboutSection from "./components/AboutSection";
 import BlogSection from "./components/BlogSection";
