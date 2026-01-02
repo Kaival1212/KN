@@ -118,7 +118,7 @@ export default function Home() {
       {/* Consider removing these to reduce clutter */}
       <BlogSection />
       <AboutSection />
-
+      
       <div className="elfsight-app-48d4cd78-4a23-4b5f-bcc1-4f9497937d4c" data-elfsight-app-lazy></div>
 
     </>
