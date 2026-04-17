@@ -459,31 +459,32 @@ export default function PropertyCaseStudy() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-6">
-            Exploring a Property Management Platform for Your Portfolio?
+      <section className="py-20 bg-kn-navy">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-kn-green font-semibold text-sm uppercase tracking-widest mb-4">Need something similar?</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6">
+            Let's build your property management system.
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Speak with KN Consulting about building a property management system
-            tailored to your portfolio and operating model. We focus on systems that
-            deliver measurable operational impact.
+          <p className="text-lg text-white/50 mb-10 max-w-2xl mx-auto">
+            We build custom property platforms on Laravel — tailored to your portfolio size, workflow, and team. Fixed price, clear timeline.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-kn-green text-white font-semibold rounded-lg hover:bg-kn-green/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-kn-green text-white px-8 py-4 rounded-xl font-bold hover:bg-kn-green/90 transition-all shadow-lg shadow-kn-green/20"
             >
-              Discuss Your Project
-              <ArrowRight className="w-5 h-5 ml-2" />
+              Discuss Your Project <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="/our-work"
-              className="inline-flex items-center px-8 py-4 border border-kn-navy text-kn-navy font-semibold rounded-lg hover:bg-kn-navy/5 transition-colors"
+              className="inline-flex items-center justify-center gap-2 border border-white/20 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition-all"
             >
-              View More Case Studies
+              View More Projects
             </Link>
           </div>
+          <p className="mt-6 text-white/30 text-sm">
+            Or email <a href="mailto:sales@knconsulting.uk" className="text-kn-green hover:underline">sales@knconsulting.uk</a>
+          </p>
         </div>
       </section>
     </div>

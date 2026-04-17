@@ -156,6 +156,14 @@ export default function EurowashCaseStudy() {
         }
     ]
 
+    // Tech stack
+    const techStack = [
+        { name: 'Laravel', desc: 'Backend API and workflow logic' },
+        { name: 'Livewire', desc: 'Real-time staff dashboard' },
+        { name: 'Stripe', desc: 'Payment links and automation' },
+        { name: 'SMS and Email', desc: 'Customer notifications' },
+    ]
+
     // Updated, realistic results
     const results = [
         { metric: '0 Manual', description: 'Order Tracking' },
@@ -308,32 +316,48 @@ export default function EurowashCaseStudy() {
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="py-20 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-kn-navy mb-6">
-                        Want to Automate Your Service Workflow?
-                    </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-                        Let’s streamline your operations with a custom-built automation system.
-                    </p>
+            {/* TECH STACK */}
+            <section className="py-16 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-2xl font-extrabold text-kn-navy text-center mb-8">Built With</h2>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+                        {techStack.map((t) => (
+                            <div key={t.name} className="text-center p-5 bg-gray-50 rounded-xl border border-gray-100">
+                                <h3 className="font-bold text-kn-navy mb-1">{t.name}</h3>
+                                <p className="text-xs text-gray-500">{t.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
+            {/* CTA */}
+            <section className="py-20 bg-kn-navy">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <p className="text-kn-green font-semibold text-sm uppercase tracking-widest mb-4">Want something like this?</p>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6">
+                        Let’s automate your operations.
+                    </h2>
+                    <p className="text-lg text-white/50 mb-10 max-w-2xl mx-auto">
+                        We build custom automation systems for service businesses — built on Laravel, integrated with payments, and running 24/7 without staff.
+                    </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             href="/contact"
-                            className="inline-flex items-center px-8 py-4 bg-kn-green text-white font-semibold rounded-lg hover:bg-kn-green/90 transition-colors"
+                            className="inline-flex items-center justify-center gap-2 bg-kn-green text-white px-8 py-4 rounded-xl font-bold hover:bg-kn-green/90 transition-all shadow-lg shadow-kn-green/20"
                         >
-                            Start Your Project
-                            <ArrowRight className="w-5 h-5 ml-2" />
+                            Start Your Project <ArrowRight className="w-5 h-5" />
                         </Link>
-
                         <Link
                             href="/our-work"
-                            className="inline-flex items-center px-8 py-4 border border-kn-navy text-kn-navy font-semibold rounded-lg hover:bg-kn-navy/5 transition-colors"
+                            className="inline-flex items-center justify-center gap-2 border border-white/20 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition-all"
                         >
                             View More Case Studies
                         </Link>
                     </div>
+                    <p className="mt-6 text-white/30 text-sm">
+                        Or email <a href="mailto:sales@knconsulting.uk" className="text-kn-green hover:underline">sales@knconsulting.uk</a>
+                    </p>
                 </div>
             </section>
         </div>

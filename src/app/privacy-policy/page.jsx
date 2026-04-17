@@ -98,7 +98,7 @@ const PrivacyPolicyPage = () => {
                         </ul>
                         <p className="text-gray-600">
                             To exercise your rights, contact us at
-                            <span className="font-semibold text-kn-green"> support@knconsulting.uk</span>.
+                            <span className="font-semibold text-kn-green"> sales@knconsulting.uk</span>.
                         </p>
                     </div>
 
@@ -125,7 +125,7 @@ const PrivacyPolicyPage = () => {
                             For questions about this Privacy Policy or how we use your data, please contact:
                         </p>
                         <ul className="list-disc list-inside text-gray-600 space-y-1">
-                            <li>Email: <span className="font-semibold text-kn-green">support@knconsulting.uk</span></li>
+                            <li>Email: <span className="font-semibold text-kn-green">sales@knconsulting.uk</span></li>
                             <li>Phone: +44 7377 297077</li>
                             <li>Business Name: KN Consulting & Innovation Ltd</li>
                             <li>Location: Twickenham, London, United Kingdom</li>

@@ -14,14 +14,22 @@ const caseStudies = [
     highlight: 'Live System'
   },
   {
-    //for Loyalty Programs at Happy London Restaurant
-    image: 'https://happyrestaurants.com/files/images/398/fit_1236_432_0f5ffa4df0ecda885629751e976071d0.jpg',
-    title: 'Happy London Digital Loyalty Experience',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1471&auto=format&fit=crop',
+    title: 'Smart Locker & Laundry Contractor Platform',
     description:
-      'Wallet-integrated loyalty system built for Apple Wallet and Google Wallet—delivering a measurable increase in repeat visits within the first 90 days.',
-    tags: ['Digital Loyalty', 'Customer Retention', 'Mobile Integration'],
-    href: '/our-work/happy-london-loyalty',
-    highlight: 'Proven Results'
+      'A two-sided marketplace where contractors register to offer laundry and service wash jobs, and customers book and pay—all managed through smart lockers with zero staff required.',
+    tags: ['Contractor Marketplace', 'Smart Lockers', 'Service Booking'],
+    href: '/our-work/launderettes-near-me',
+    highlight: 'In Development'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1471&auto=format&fit=crop',
+    title: 'KN Loyalty — Digital Loyalty for Any Business',
+    description:
+      'Our own product. A no-app-required digital loyalty solution—customers onboard in 10 seconds and get a loyalty card stored in Apple or Google Wallet. Businesses get a CRM, customer tracking, and push notification tools.',
+    tags: ['KN Loyalty', 'Wallet Cards', 'Push Notifications', 'CRM'],
+    href: '/products/kn-loyalty',
+    highlight: 'Our Product'
   },
   {
     image: 'https://images.unsplash.com/photo-1560472355-536de3962603?q=80&w=1471&auto=format&fit=crop',
@@ -40,6 +48,7 @@ function CaseStudyCard({ image, title, description, tags, href, highlight }) {
       {highlight && (
         <div className="absolute top-4 right-4 z-10">
           <span className={`px-3 py-1 rounded-full text-xs font-semibold ${highlight === 'Live System' ? 'bg-kn-green text-white' :
+            highlight === 'Our Product' ? 'bg-purple-600 text-white' :
             highlight === 'Proven Results' ? 'bg-blue-500 text-white' :
               'bg-orange-500 text-white'
             }`}>
