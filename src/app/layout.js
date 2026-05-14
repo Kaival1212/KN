@@ -287,15 +287,6 @@ export default function RootLayout({ children }) {
         </Script>
         <Script src="https://elfsightcdn.com/platform.js" async />
         <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />
-        <Script id="zoho-siq-init" strategy="afterInteractive">
-          {`window.$zoho=window.$zoho||{};window.$zoho.salesiq=window.$zoho.salesiq||{ready:function(){}};`}
-        </Script>
-        <Script
-          id="zsiqscript"
-          src="https://salesiq.zohopublic.eu/widget?wc=siq6156827da27c0a03f726d18ff7922b8accbb122c471786e5fd6ec84a6f3becdcaf49078d6c2f74805a78742fb605433c"
-          strategy="afterInteractive"
-          defer
-        />
         {/* JSON-LD structured data */}
         <script
           type="application/ld+json"

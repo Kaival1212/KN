@@ -94,15 +94,15 @@ export default function AboutPage() {
               </h2>
 
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                KN Consulting was founded by <strong className="text-kn-navy">Kaival Patel</strong> — a developer who saw first-hand how businesses were being slowed down by manual work, unreliable digital tools, and agencies that over-promised and under-delivered.
+                KN Consulting & Innovation Ltd was founded by <strong className="text-kn-navy">Kaival Patel</strong> — a developer who saw first-hand how businesses were being slowed down by manual work, unreliable digital tools, and agencies that over-promised and under-delivered.
               </p>
 
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                Instead of the standard agency approach, Kaival built KN Consulting on an engineering-first philosophy — visiting businesses, studying real operations, and building systems that solve actual problems with measurable impact.
+                Instead of the standard agency approach, Kaival built KN Consulting & Innovation on an engineering-first philosophy — visiting businesses, studying real operations, and building systems that solve actual problems with measurable impact.
               </p>
 
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Today, KN Consulting delivers technology for laundrettes, restaurants, property firms, service companies, and early-stage startups across the UK. The mission: engineer systems that work in the real world, not just on a portfolio page.
+                Today, KN Consulting & Innovation delivers technology for laundrettes, restaurants, property firms, service companies, and early-stage startups across the UK. The mission: engineer systems that work in the real world, not just on a portfolio page.
               </p>
 
               <ul className="space-y-3">

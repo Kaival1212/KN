@@ -58,7 +58,7 @@ export default function Footer() {
           <div className="md:col-span-4">
             <Link href="/" aria-label="KN Consulting homepage" className="inline-block mb-6">
               <span className="text-white font-extrabold text-2xl tracking-tight">
-                KN <span className="text-kn-green">Consulting</span>
+                KN <span className="text-kn-green">Consulting & Innovation</span>
               </span>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">

@@ -4,7 +4,6 @@ import { ArrowRight, Check, Star, Zap, Phone, Mail } from "lucide-react";
 import Service from "./components/Service";
 import CaseStudiesSection from "./components/CaseStudiesSection";
 import AboutSection from "./components/AboutSection";
-import BlogSection from "./components/BlogSection";
 import FAQ from "./components/FAQ";
 
 // ─── HERO ────────────────────────────────────────────────────
@@ -209,7 +208,6 @@ export default function Home() {
       <CaseStudiesSection />
       <FAQ />
       <CTABanner />
-      <BlogSection />
       <AboutSection />
       <div className="elfsight-app-48d4cd78-4a23-4b5f-bcc1-4f9497937d4c" data-elfsight-app-lazy />
     </>
